@@ -3299,6 +3299,11 @@ figcaption {
   margin-left: 32px;
 }
 
+.page-wrapper {
+  margin-right: 0px;
+  cursor: pointer;
+}
+
 .licenses-hero {
   padding-top: 160px;
   padding-bottom: 90px;
@@ -3331,6 +3336,8 @@ figcaption {
 .section.my-work {
   position: relative;
   overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .section.contact {
@@ -3343,6 +3350,7 @@ figcaption {
 .section.store {
   position: relative;
   overflow: hidden;
+  padding-bottom: 0px;
 }
 
 .section.product-description {
@@ -4451,6 +4459,9 @@ figcaption {
 
 .mg-top-80px {
   margin-top: 80px;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding-right: 0px;
 }
 
 .blob-shop-one {
@@ -4724,7 +4735,7 @@ figcaption {
 }
 
 .menu-grid-wrapper {
-  min-width: 460px;
+  min-width: 360px;
   padding: 32px 38px 40px;
   border-radius: 24px;
   background-color: #1e143a;
@@ -4732,15 +4743,25 @@ figcaption {
 }
 
 .menu-grid {
+  justify-items: center;
   -webkit-box-align: start;
   -webkit-align-items: start;
   -ms-flex-align: start;
   align-items: start;
-  grid-column-gap: 26px;
-  -ms-grid-columns: 0.6fr 1fr;
-  grid-template-columns: 0.6fr 1fr;
+  grid-column-gap: 3px;
+  grid-template-areas: ". Area";
+  -ms-grid-columns: 0.6fr 3px 0.25fr;
+  grid-template-columns: 0.6fr 0.25fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
+}
+
+.mega-menu {
+  display: block;
+  overflow: visible;
+  text-align: center;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .mega-menu-title {
@@ -4812,6 +4833,79 @@ figcaption {
 .list-item-social-media:hover {
   -webkit-transform: scale3d(0.9, 0.9, 1.01);
   transform: scale3d(0.9, 0.9, 1.01);
+}
+
+.gallery {
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  cursor: pointer;
+}
+
+.centered-container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+
+.gallery-grid-container {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 40px;
+  -ms-grid-row-align: center;
+  align-self: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-areas: ".";
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto 20px auto;
+  grid-template-rows: auto auto;
+}
+
+.gallery-lightbox {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-thumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+}
+
+.image-2 {
+  position: static;
+  display: block;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.div-block {
+  margin-top: 0px;
+}
+
+.image-3 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.image-4 {
+  height: 400px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -5447,6 +5541,13 @@ figcaption {
     margin-right: 18px;
     margin-left: 18px;
   }
+
+  .gallery-grid-container {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -5798,6 +5899,18 @@ figcaption {
   .menu-grid-wrapper {
     min-width: auto;
   }
+
+  .gallery {
+    padding: 40px 20px;
+  }
+
+  .gallery-grid-container {
+    max-width: none;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -6083,6 +6196,41 @@ figcaption {
   .social-media-icon.youtube {
     font-size: 18px;
   }
+
+  .centered-container {
+    text-align: left;
+  }
+
+  .gallery-grid-container {
+    margin-right: 0px;
+    margin-left: 0px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+  }
+}
+
+#w-node-fc8e8584-1c1c-f1aa-6bec-5a906a135407-cdf5afbc {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-e75329c5-4d08-14af-e303-bd33d3149bde-cdf5afbc {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
 }
 
 #w-node-_976f08fa-4bd7-5cb4-b53d-2187f5f1194b-cdf5afbc {
