@@ -3301,7 +3301,6 @@ figcaption {
 
 .page-wrapper {
   margin-right: 0px;
-  cursor: pointer;
 }
 
 .licenses-hero {
@@ -3837,6 +3836,11 @@ figcaption {
   transform-style: preserve-3d;
 }
 
+.seperate-containers {
+    display: flex;
+    justify-content: space-between;
+}
+
 .button-container:hover {
   -webkit-transform: scale3d(0.94, 0.94, 1.01);
   transform: scale3d(0.94, 0.94, 1.01);
@@ -4149,14 +4153,14 @@ figcaption {
 }
 
 .form-container {
-  min-height: 640px;
+  min-height: 540px;
   padding: 3px;
   border-radius: 50px;
   background-image: linear-gradient(280deg, #6148ff, #edb8ff);
 }
 
 .form-background {
-  min-height: 640px;
+  min-height: 540px;
   padding: 76px 44px;
   border-radius: 50px;
   background-color: #0f0823;
